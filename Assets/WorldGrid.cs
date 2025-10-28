@@ -18,11 +18,21 @@ public class WorldGrid : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Given a position in the cell returns the center of that cell
+    /// </summary>
+    /// <param name="cellPosition"></param>
+    /// <returns></returns>
     public Vector3 GetCellCenter(Vector3Int cellPosition)
     {
         return worldGrid.GetCellCenterWorld(cellPosition);
     }
     
+    /// <summary>
+    /// Given a world position returns the bottom left corner of the nearest cell
+    /// </summary>
+    /// <param name="position"></param>
+    /// <returns></returns>
     [Button]
     public Vector3Int GetWorldGridPosition(Vector3 position)
     {
